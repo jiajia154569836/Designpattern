@@ -1,19 +1,13 @@
 package 装饰器模式;
 
-public class RedShapeDecorator extends ShapeDecorator {
+public  class RedShapeDecorator extends ShapeDecorator {
 
-    public RedShapeDecorator(Shape decoratedShape) {
-        super(decoratedShape);
+    public  RedShapeDecorator(Shape shape)
+    {
+        super(shape);
     }
-
-    @Override
-    public void draw() {
-        decoratedShape.draw();
-        setRedBorder(decoratedShape);
-    }
-
-    private void setRedBorder(Shape decoratedShape){
-        System.out.println("Border Color: Red");
-        decoratedShape.draw();
+    public void draw(){
+        System.out.println("红色");
+        shape.draw();
     }
 }

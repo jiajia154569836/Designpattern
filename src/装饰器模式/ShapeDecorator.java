@@ -1,13 +1,14 @@
 package 装饰器模式;
 
-public /*abstract*/ class ShapeDecorator implements Shape {
-    protected Shape decoratedShape;
 
-    public ShapeDecorator(Shape decoratedShape){
-        this.decoratedShape = decoratedShape;
+public class ShapeDecorator implements Shape {
+    protected Shape shape;
+    public  ShapeDecorator(Shape shape){
+        this.shape=shape;
+    }
+    public void draw()
+    {
+        shape.draw();
     }
 
-    public void draw(){
-        decoratedShape.draw();
-    }
 }

@@ -1,4 +1,4 @@
-package 装饰器模式;
+package 工厂模式;
 
 public class Circle implements Shape {
     public void draw()
